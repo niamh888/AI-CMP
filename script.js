@@ -2,6 +2,12 @@ document.getElementById('parseBtn').addEventListener('click', showReview);
 
 document.getElementById('reviewForm').addEventListener('submit', submitReview);
 
+document.getElementById('deleteCheckbox').addEventListener('change', function() {
+    if (this.checked) {
+        document.getElementById('review-section').style.display = 'none';
+    }
+});
+
 function showReview() {
     document.getElementById('review-section').style.display = 'block';
 }
