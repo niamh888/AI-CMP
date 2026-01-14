@@ -2,13 +2,13 @@
 - [x] Verify that the copilot-instructions.md file in the .github directory is created.
 
 - [x] Clarify Project Requirements
-	Project type: Web application using HTML, CSS, JavaScript for compliance review of AI-enabled medical devices, extracting questions from Word document.
+	Project type: Web application using HTML, CSS, JavaScript for compliance review of AI-enabled medical devices, extracting questions from PDF document and generating HTML forms.
 
 - [x] Scaffold the Project
 	Created index.html, styles.css, script.js, and README.md manually.
 
 - [x] Customize the Project
-	Implemented compliance review functionality with Word document parsing.
+	Implemented compliance review functionality with PDF text extraction, HTML generation, and static form display.
 
 - [x] Install Required Extensions
 	No extensions needed for plain web app.

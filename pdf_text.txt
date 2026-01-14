@@ -1,0 +1,992 @@
+14971: 4.4; IEC 62304: 5.1.1; MDR: 23.1
+- Risk acceptability criteria defined and justified - ISO
+14971: 4.4; IEC 62304: 5.1.2; MDR: 1, 4
+- Risk Management for AI ISO 24971-2 and other
+relevant standards identifying risk to SaMD
+- Review of regulatory databases for similar / existing
+devices for risks.
+16.2. I s the Risk Management Risk Management ISO 14971: 4.2 Top Management shall
+Policy impacted? define and document a policy for establishing the criteria
+for risk acceptability. See also ISO/TR 24971 for
+guidance on defining a risk policy.
+16.3. I ntended use and Safety Is the intended Use Impacted with respect to risk and
+Characteristics defined? safety characteristics?
+- Intended use documented and aligned - ISO 14971:
+5.4; IEC 62304: 5.1.1; MDR: 1, 23.4
+- Safety-related characteristics identified - ISO 14971:
+5.4; IEC 62304: 5.2.2; MDR: 4
+- Software safety classification performed - IEC 62304:
+4.3; MDR: 6
+16.4. H azard Identification & Have you performed a Hazard identification assessment
+Risk Analysis and documented risk analysis? If not provide adequate
+rationale.
+- Hazards identified (device, software, data, AI-specific)
+- ISO 14971: 5.5; IEC 62304: 5.2.1; MDR: 1, 4
+- Hazardous situations described - ISO 14971: 5.5; IEC
+62304: 5.2.2; MDR: 4
+- Harms defined and clinically validated — ISO 14971:
+5.5; MDR: 1, 8
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 29 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+- Software-specific hazards included — ISO 14971: 5.5;
+IEC 62304: 5.2.2; MDR: 17
+16.5. H ave you estimated the Ensure data is available to support risk evaluation or
+risks and evaluated impact adequate rationale is provided.
+on existing or new risks
+(including estimating - Probability and severity estimated — ISO 14971:
+probability and severity 5.5.2; IEC 62304: 5.4.1; MDR: 4
+and acceptability?) - Risk acceptability evaluated — ISO 14971: 6; IEC
+62304: 5.4.2; MDR: 4
+- AI-specific risks evaluated (bias, drift, explainability) -
+ISO 14971: 6; MDR: 1, 5, 17
+16.6. H ave risk control - Risk control options identified — ISO 14971: 7.1; IEC
+measures of existing risk 62304: 5.5.1; MDR: 4, 23.3
+been impacted or - Controls implemented — ISO 14971: 7.2; IEC 62304:
+potentially impacted by 5.5.2; MDR: 23.3
+this change? - Verification of risk controls performed — ISO 14971:
+7.3; IEC 62304: 5.6.1; MDR: 5
+- Traceability from hazard → control → verification —
+ISO 14971: 4.5; IEC 62304: 5.1.5; MDR: 23.1
+16.7. A re new risk control - Risk control options identified — ISO 14971: 7.1; IEC
+measures required for this 62304: 5.5.1; MDR: 4, 23.3
+change? - Controls implemented — ISO 14971: 7.2; IEC 62304:
+5.5.2; MDR: 23.3
+- Verification of risk controls performed — ISO 14971:
+7.3; IEC 62304: 5.6.1; MDR: 5
+- Traceability from hazard → control → verification —
+ISO 14971: 4.5; IEC 62304: 5.1.5; MDR: 23.1
+16.8. H ave you assessed the - Residual risk estimated and evaluated — ISO 14971:
+Residual Risk of existing 8; IEC 62304: 5.7.1; MDR: 4
+risks impacted and new - Benefit-risk analysis performed — ISO 14971: 8; IEC
+potential risks including 62304: 5.7.2; MDR: 1, 8
+analysis of Benefit-Risk - Overall residual risk acceptable — ISO 14971: 9;
+conclusions? MDR: 1
+16.9. H ave you - Risk Management Report completed — ISO 14971: 9;
+reviewed/updated the Risk IEC 62304: 5.8.1; MDR: 23.1
+Management Report & - RMF includes all required elements — ISO 14971:
+Documentation 4.5; MDR: 23.4
+- Software documentation aligns with technical file —
+IEC 62304: 5.1–5.8; MDR: 23.4
+16.10. H ave you reviewed the - PMS data collected and analysed — ISO 14971: 10.2;
+Production and Post- IEC 62304: 9.1–9.2; MDR: 1, 5, 23.4
+Market Surveillance for
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 30 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+potential impact or - Software updates assessed for new risks — ISO 14971:
+introduction of new risks? 10.3; IEC 62304: 9.3; MDR: 23.4
+- CAPA integrated into risk management — ISO 14971:
+10.4; IEC 62304: 9.3; MDR: 5
+16.11. H ave you addressed AI - Bias risk identification & mitigation — ISO 14971:
+Specific Risks including 5.5; MDR: 1, 5
+but not limited to, Bias, - Drift monitoring plan — ISO 14971: 10; IEC 62304:
+Drift, Autonomous 9; MDR: 5
+Change, Monitoring - Explainability and transparency controls — ISO
+Methods, Explainability & 14971: 7; MDR: 23.4
+Transparency, Human in - Human-in-the-loop safety mechanisms — ISO 14971:
+the loop safety 7; IEC 62304: 5.5; MDR: 5
+mechanisms?
+16.12. H ave you addressed ISO 62366-1, -2, -3
+Usability risk?
+- Is Usability Engineering File impacted?
+- Are Usability studies required for this change?
+- If not, provide rationale.
+16.13. H ave you reviewed, UK Specific Requirements include: DCB0129, DCB0160
+addressed clinical (NHS). https://digital.nhs.uk/services/clinical-safety/clinical-
+procedure/pathway risks risk-management-standards
+with clear communication
+to stakeholders for If not impacted or relied upon for Software Risk
+awareness and Engineering Rigor reduction, provide rationale.
+responsibilities?
+16.14. A re there new hazards / identify all documents with the risk management file with
+hazardous situations ID & revisions that were reviewed, including identifying
+identified? line items where applicable
+16.15. W as a risk analysis provide evidence or reference documentation and
+session/activity attendees with dates/signatures
+documented within QMS
+document control for this
+change?
+16.16. I s an update required to Is the benefit-risk conclusion/ratio impacted and if not,
+the Benefit-risk provide rationale. If it is provided updated document.
+conclusions?
+16.17. H ave Top Management Top management shall review the suitability of the risk
+been engaged at all the management process at planned intervals to ensure
+appropriate steps with continuing effectiveness of the risk management process
+evidence of same? and shall document any decisions and actions taken. This
+may be part of the QMS review (e.g., at Management
+Review or other appropriate interval/ QMS process). Key
+Top Management responsibilities:
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 31 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+- Establish Risk Management Policy
+- Establish Risk Management Plan
+- Define roles and responsibilities
+- Provide Adequate competent Resources and have
+responsibilities defined in SOPs/Job Specifications
+for risk management specifically
+- Approve Risk Management Report
+- Evaluate Overall Residual Risks
+- Perform Risk Review for Risk Process Suitability
+- Maintain Risk Management Process
+These align with ISO 14971:2019 clauses 4.1, 4.2, 4.4,
+4.5, and 9, and are critical for demonstrating management
+commitment, oversight, and lifecycle integration
+17. Software Risk Management (PD IEC TR 80002-1) ☐ N/A
+17.0. Is there an impact to Software Risk Management or other software-specific aspects,
+not already considered? If appropriate, check N/A and leave remaining questions in
+this section blank. Provide rationale: Click or tap here to enter text.
+17.1. N Are there software risks that Indicate whether software risk management is
+are defined outside of ISO separately defined. Yes, No. If no, provide
+14971? rationale. Software risk management is
+required as part of IEC 62304 that meet the
+requirements of ISO 14971. PD IEC/TR
+80002-1:2009 provides guidance on the
+application of ISO 14971 to medical device
+software. Evidence: Sub-systems shall be
+defined under procedures, plans, etc. Note:
+Additional tools for software risk analysis may
+be defined including Fault Tree Analysis for
+Top-Down Risk Assessment method. Ref. ISO
+31010 and IEC 61025 FTA, IEC 60812 FMEA.
+17.2. Are there any new software If yes, where are these documented and have,
+related adverse events, hazards, they been assessed for harm? Update the
+hazardous situations, or harms Product Level Risk Management where a
+related to this change? software risk can lead to potential harm of end
+user(s).
+Software should be performed on the whole
+medical device (system), including software,
+SOUP, AI and hardware and its environment.
+Software risk management activities should
+NOT be conducted in isolation from the
+system. Some activities for risk management
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 32 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+may be best performed by software engineers
+as an integral part of IEC 62304 Software
+Development Lifecycle and can include
+software risk identification. Isolation is not
+accepted where software risks cannot be
+managed in isolation from the overall medical
+device risk management due to the
+interdependence of hardware failures,
+software failures and risk control measures.
+Sub-systems shall be defined.
+Evidence: provide risk analysis documented
+review/outcomes.
+17.3. Probability of occurrence Provide details of how probability of
+methodology should be occurrence is captured or refer to SOP/Plan.
+appropriate for software.
+Figure 1 PD IEC TR 80002-1:2009 (current Jan 2026)
+Note: software engineering rigor per IEC
+62304 is defined based on severity.
+17.4. Has the list of anomalies, IEC 62304 and ISO 14971 requires full risk
+software bugs or defects been analysis and evaluation. However, software
+reviewed for risk and escalated anomalies are difficult to evaluate for
+to product risk management as probability contributing to hazardous
+appropriate? situations (ref. PD IEC 80002-1), since
+software does not fail randomly in us.
+Therefore, the method for evaluating software
+bugs not be defined under a software-specific
+risk management process. Integration and
+escalation points should be defined. Risks
+arising from software anomalies most often
+are evaluated based on severity of harm alone.
+Where potential harm meets the definition of
+ISO 14971, escalation to product risk analysis
+is required.
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 33 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+17.5. SOUP Anomaly List for Risk If Software of Unknown Provenance (SOUP) is
+Management used, active monitoring and evaluating
+publicly available anomaly lists and
+information about the SOUP field performance
+should be planned. Where possible this should
+be supported by contractual agreement with
+the SOUP supplier at the time of SOUP
+acquisition.
+17.6. User Interface(s) and Integration Software Graphical / User Interfaces are a
+in a Clinical Setting necessary aspect of a software system that is
+required to be planned, implemented and
+iteratively reviewed and assessed for risk,
+including prior to planned or unplanned
+changes. Usability engineering (ISO 62366-x)
+should include software- and AI-related
+components. The processes shall be defined in
+the software development plan or relevant
+plan(s).
+Note: IEC 80001-1 should be considered for
+IT networks in a clinical environment with
+responsibilities delineated between
+manufacturer and healthcare technician
+responsible for integration into IT network in a
+clinical setting.
+17.7. Are software checklists or Example questions:
+software safety aspects
+adequately considered, including - can the safety-related software item gain
+fault tolerance? access to its processor when needed?
+- can the safety-related software item be
+guaranteed enough processor time to
+complete its task before an unsafe state
+develops into an accident?
+- can it be demonstrated that no other
+software item can corrupt or otherwise
+interfere with the safety-related software
+item?
+- are the development methods adequate to
+make risks visible to the designer(s) and
+risk assessor(s) e.g., state machines, UML.
+- What aspects require fault tolerance
+design, i.e., ensuring the safety-related
+functions continue to operate in the
+presence of component faults, including
+software anomalies (e.g., by use of
+redundancy or switch to safe mode).
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 34 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+18. AI Risk Management (ISO/DTS-24971-2 2025) ☐ N/A
+18.0. Does the change impact AI related risk management or potential risk scenarios? If not
+indicate N/A and leave remaining questions in this section blank. Provide rationale:
+Click or tap here to enter text.
+18.1. Apply ISO 14971 risk Apply ISO 14971 risk framework to assessment of
+management to machine- AI-related risks, or provide rationale for equivalent
+learning medical devices. method. Include ML-specific hazards, drift, bias,
+data issues, interoperability, accessibility (ref. EU
+Accessibility Act), etc.
+18.2. Are additional resources Ensure ML-specific oversight and review. Provide
+required? appropriate resources to perform risk activities
+with ML knowledge and, assign competent
+personnel. Ensure team has ML, data, clinical,
+usability, cybersecurity expertise
+18.3. Has risk policy/plan(s) been Ensure review and acceptability criterion is
+reviewed/updated to take appropriate for AI devices, including those capable
+account of AI/ML medical of autonomous change.
+devices including risk
+acceptability criterion?
+18.4. Does the risk management file Risks should cover the full MLMD lifecycle. Include
+require updating, including for ML behaviour, drift, bias, data chain failures, refer
+consideration of AI risks to ISO/TR 24971 or other appropriate standards for
+throughout the full lifecycle methods and techniques. Identify AI specific
+(concept through hazards, ref. Annex B & C (ISO/DTS-24971-2
+decommission)? 2025)
+18.5. Are there controls in place that Provide details. Define triggers, data collection,
+ensure adequate monitoring, frequency, etc.
+retraining, update criteria,
+rollback provisions?
+18.6. Is traceability maintained for Include dataset provenance, model versions
+all hazards, controls, testing
+and information provided to
+end-user(s).
+18.7. Have the AI/ML-specific Document and/or update the Characteristics
+characteristics affecting safety related to safety for AI related risks. Provide
+been documented? reference to documentation. Include data quality,
+autonomy, explainability, bias, etc.
+18.8. Is the estimate of risk suitable Use severity only where the probability is unknown.
+for AI/ML devices? Consider data representativeness, usability studies.
+Include ML performance drift & subgroup
+performance.
+18.9. Are controls to hazards Test with synthetic data, demographic bias checks
+adequately verified?
+18.10. Evaluate residual risk incl. Are explainability tools verified/validated.
+transparency & explainability Disclosure must include ML limitations. Include
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 35 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+performance claims and differences with adequate
+transparency for user needs. Address transparency
+as a risk, identifying the risk of too much/too little
+transparency.
+18.11. Evaluate residual risk vs Consider autonomy level, novelty, UI usability,
+benefits representative population, accessibility, etc.
+18.12. How are significant residual Significant risks must be communicated. Consider
+risks communicated to each documenting disclaimer notices on reports, etc. to
+user/stakeholder; update as ensure user(s) including patients understand AI is
+appropriate. used in the device and to what extent.
+18.13. Ensure product risk Document Risk Management Plan, Analyses,
+management requirements are Evaluation, Reporting, Review, Characteristics
+met unless process / procedure related to safety, Benefit-Risk, etc.
+indicates otherwise.
+18.14. Determine the monitoring Set monitoring frequency for performance & drift
+schedule for AI devices detection and user acceptance on an ongoing basis.
+(locked and unlocked, Define the duration of the monitoring (e.g.,
+continual/continuous learning). continuous throughout the full lifecycle and
+frequency). Locked algorithms are subject to
+change though not at the same rate. A rationale
+should be provided for frequency and monitoring
+employed.
+18.15. Identify if update is required to Assign responsibility for collecting and monitoring
+performance logs, error logs, logs and results to maintain performance.
+drift monitoring metrics, etc.
+18.16. Review post-market data for Identify safety signals linked to ML behaviour.
+feedback associated with this Ensure retraining schedule and model updates are
+device/change. adequate with rollback as needed. Document
+planned re-training schedule and method including
+method used for model updates. Provide reference
+to documents, such as maintenance plan or
+equivalent. Ensure versioning & traceability is
+maintained.
+19. Clinical Risk Management (NHS Digital Health Guidance) ☐ N/A
+19.0. Does the change impact Clinical Risk Management (NHS)? If not indicate N/A and
+leave remaining questions in this section blank. Provide rationale where a change is
+made to a UK product: Click or tap here to enter text.
+19.1. Is an assessment of Clinical Yes, No. If no, provide rationale.
+Risk Management: its
+application in the manufacture
+of Health IT Systems –
+Implementation Guidance, ID:
+NPFIT-FNT-TO-TOCLNSA-
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 36 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+1300.06 required for Refer to
+placement of this http://digital.nhs.uk/isce/publication/dcb0129 for
+device/health software on the recent / updated versions.
+UK market?
+19.2. Is a clinical safety case report Yes, No. If no, provide rationale.
+required for full impact
+assessment of this change?
+20. Security Lifecycle (IEC-81001-5-1 2021) ☐ N/A
+20.0. Does the change impact security? If not, indicate N/A and leave remaining questions in
+this section blank. Provide rationale where a change is made without impact to
+security: Click or tap here to enter text.
+20.1. Is the established security Security policy, responsibilities, risk ownership
+governance process adequate
+to support this change with
+roles and responsibilities
+assigned?
+20.2. Perform security risk analysis Identify threats, vulnerabilities, controls. Identify
+including AI specific risk AI specific risks, including but not limited to:
+impacting security and Model poisoning, adversarial attacks, data
+protection. poisoning, drift and continuous- or continual-
+learning risks, explainability failures, model-
+update compromise or failure, inference pipeline
+DoS, bias risks, model theft, data, theft and misuse,
+synthetic data misuse.
+20.3. Are the security requirements CIA (confidentiality, integrity, availability)
+adequately defined and tested? requirements, regulatory considerations. State the
+regulations that are necessary to comply with and
+the methods required for testing or refer to
+documented plans/protocols.
+20.4. Develop/review secure system Ensure Threat modelling is performed and
+architecture for additional processes and procedures are in place to mitigate
+threats. vulnerabilities (e.g., privilege separation)
+20.5. Are secure coding and Identify process/procedures for security code
+development impacted by this review with static analysis.
+change?
+20.6. Are existing security controls What has been reviewed/tested to ensure controls
+adequate and verified? Are are acceptable e.g., pen-testing, security test
+new security controls evidence.
+required?
+20.7. Is the secure release process Reference the processes in place for secure release
+appropriate? and configuration maintenance and approval.
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 37 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+20.8. Are updates and patches Security advisories, vulnerability management plan
+required to support this
+change?
+20.9. Have credible field logs, Monitor field security reports, Incident response,
+incident reports and supplier and monitoring logs. Review device reports and
+anomaly or device security lots security specialists, NIST, OWASP, etc.
+identified a risk that could
+impact this change?
+20.10. Ensure risks with potential Identify threats, vulnerabilities, controls with
+harm are escalated or traceable potential for harm to end user and ensure ISO
+to product level risk analysis. 14971 is met.
+21. Software / AI BOM (Bill of Materials) ☐ N/A
+21.0. Does the change impact BOM? If not, indicate N/A and leave remaining questions in
+this section blank. Provide rationale where a change is made without impact to BOM:
+Click or tap here to enter text.
+21.1. Identify SBOM / AIBOM SBOM and AIBOMs are necessary for security but
+document ID version(s) are also valuable tools for identifying and risk
+assessing software and security related risks as well
+as applying SOUP controls per IEC 62304 where
+applicable.
+21.2. Are new software/ AI ☐ Yes, provide reference: Click or tap here to enter text.
+components required to be ☐ No If no, provide rationale Click or tap here to enter
+added to S/AI BOM text.
+22. Information Security, Cyber and Privacy Protection (IEC 27001) ☐ N/A
+Note: IEC 27001 is a non-healthcare specific standard. Refer to applicable standards for your
+organisation for compliance or use as guidance only. This standard is used for establishing,
+implementing, maintaining and continually improving an information security management
+system.
+22.0. Has an ISMS – Information Clause 4 Context; where an ISMS system is
+Security Management System established and is maintained, review ISMS policy
+been defined and certified? and process documentation for impact from
+changes specified. Ensure the scope of the ISMS is
+adequately defined, including boundaries and
+applicability.
+If an ISMS per IEC 27001 is not required,
+indicate section as N/A and move to next section
+(subsequent questions in this section can remain
+blank where N/A is indicated).
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 38 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+22.1. Is there an impact to the Clause 4 Context; understand the organisation
+organisation and its context? and its context. Identify internal and external
+issues. What are the interfaces and dependencies
+between activities performed by the organisation
+(e.g., cloud computing) and those performed by
+other organisations? Evidence: provide a list of
+issues and content analysis.
+22.2. Is there an impact to the Clause 4 Context; understand the needs of
+stakeholders or needs of interested parties by identifying stakeholders and
+interested parties? their requirements. Evidence: provide
+stakeholder requirements document(s).
+22.3. Is there a need for leadership Clause 5.1 Leadership; is a demonstration of top
+understanding/acknowledgement management commitment necessary for this
+dependent on the criticality or change. If so, provide evidence: meeting minutes,
+nature of the change? leadership policy, statements or other. Refer to
+5.1 for full list of methods of demonstration of
+leadership (i.e., policy, strategy, integration into
+organisation’s processes, resources,
+communication, targets/outcomes, effectiveness,
+promote improvement, support management).
+22.4. Is there an impact to the ISMS Clause 5.2 Policy; is there an impact to the ISMS
+Policy? Policy or objectives; has the ISMS Policy been
+adequately defined? Is it available and
+communicated? Evidence: an approved ISMS
+policy shall be provided.
+22.5. Is there an impact to Roles and Clause 5.3; are the ISMS roles and
+responsibilities? responsibilities assignments documented?
+Evidence: role assignment matrix/ job
+specifications, escalation and approval matrices;
+report(s) on performance of ISMS provided to Top
+Management.
+22.6. Has a Risk Assessment for ISMS Clause 6.1 Planning and Risk; has a risk
+been performed to prevent, assessment process been defined and does it
+reduce undesired effects and require updating following this change? Apply
+achieve continual improvement? the risk assessment process to identify new or
+emerging risks and assess risk controls already
+defined? Evidence: risk assessment
+documents/report(s).
+22.7. Are the risk acceptance criteria Clause 6.1.2 the IS risk assessment process must
+adequate or impacted by this define a risk acceptance criterion for performing
+change? IS risk assessments, for consistent, valid and
+comparable results that is capable of identifying
+IS risks against loss of confidentiality, integrity
+and availability for information within the scope
+of the ISMS. Risk owners will also be identified
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 39 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+and security risks are analysed and evaluated
+with prioritisation for risk treatment.
+22.8. Does the Risk Treatment Plan Clause 6.1.3 Risk Treatment: The Risk Treatment
+(with adequate controls) require Process shall be planned and documented, with
+updating to the current State of treatment options suitable to the risks identified;
+the Art? suitable controls shall be implemented, e.g.
+collection of threat intelligence, inventory of
+assets and owners maintained, acceptable use and
+procedures for handling assets, information
+transfer rules, procedures or agreements, access
+control and rights, monitoring supplier services
+with agreements in place, control process for
+acquisition, use and exit from cloud services,
+incident planning, definition and communication
+with roles and responsibilities, etc. Ref. Annex A
+22.9. Are objectives set impacted by Clause 6.2 Objectives and Planning. Objectives
+this change? for Information Security (IS) should be set at
+relevant functions and levels. They should be
+consistent with the IS policy, be measurable
+(where practicable), be monitored, communicated,
+updated as appropriate and be available as
+documented information. Planning will include: what
+will be done, what resources are required, who is
+responsible, completion targets and results
+evaluated. All changes shall be carried out in a
+Planned Manner! Evidence: documented
+objectives and plans to achieve same.
+22.10. Are the resources for IS Clause 7: determine and provide resources
+impacted or additional necessary for establishing, maintaining and
+resources necessary? improving ISMS. Evidence: resource allocation
+records, job specifications, etc.
+22.11. Is there an impact to or on Clause 7.2 Competence: competence of person(s)
+competency arising from this doing the work related to IS shall be controlled
+change? and valid in terms of education, training or
+experience. Actions is necessary to correct any
+deficiencies (training, mentoring, re-assignment)
+and evaluate effectiveness of actions with records
+to demonstrate competency.
+22.12. Is awareness training impacted or Clause 7.3 Awareness: person(s) doing the work
+required? under IS shall be aware of policy, their
+contribution to effectiveness of ISMS and
+implications for failure to perform as per ISMS.
+22.13. Is there a need for internal or Clause 7.4 Communication: a decision is
+external communication for this necessary in terms of the internal / external
+change? communication(s) including, what is to be
+communicated, when, to whom and how.
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 40 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+22.14. Is there a need for creation or Clause 7.5 (7.5.1, -2, -3) Documented
+change to documented Information. The organisation’s ISMS shall
+information? maintain relevant documentation as appropriate
+to their size, complexity and competency to ensure
+compliance and effectiveness of ISMS. Document
+Control procedures shall ensure maintenance is
+adequate (identification, description, format,
+suitable, adequate, available, protected, storage,
+etc.)
+22.15. Are the operational processes Clause 8.1 Operational Planning and Control:
+impacted or additional planning processes shall have established criteria and
+or controls necessary? implementing control of processes in accordance
+with the criteria. Documented information shall
+be available to the extent necessary to have
+confidence that the processes have been carried
+out as planned, including planned changes and
+review of consequences of unintended changes
+with mitigation for adverse effects.
+22.16. Review and update as applicable Clause 8.2 IS Risk Assessment (on-going):
+risk assessment at least for perform IS risk assessments at planned intervals
+significant changes or at planned or when significant changes are proposed or
+intervals and/or as defined per occur, taking account of the established criteria.
+policy/procedure(s). Evidence: Documented results.
+22.17. Review and update Risk Clause 8.3 IS Risk Treatment (ongoing):
+treatment plans. Implement the risk treatment plan and retain
+results.
+22.18. Is there an impact to the Clause 9.1 Monitoring, measurement, analysis
+monitoring, measurement, and evaluation (MMAE): the ISMS shall
+analysis and evaluation necessary document what needs to be monitored and
+to be performed as part of ISMS? measured, when and by whom, including security
+processes and controls; methods for same and
+ensure valid results (comparable and
+reproducible is necessary for validity. Evidence:
+results of MMAE.
+22.19. Does the change impact the Clause 9.2 Internal Audit: perform internal audits
+internal audit schedule or drive a at planned intervals to SOPs and IEC 27001 to
+need for a change to the audit demonstrate compliance and effectiveness. The
+activities? audit planning shall include frequency, methods,
+responsibilities, requirements and reporting. The
+importance of processes shall be considered as
+well as the previous audit findings. Audit criteria
+and scope shall be defined for each audit.
+Auditors selected shall be objective and impartial
+and reporting to relevant management. Evidence:
+retain records.
+22.20. Is there an impact to Management Clause 9.3 Management Review (MR) should be
+Review? defined and performed at planned intervals to
+ensure continuing suitability, adequacy and
+effectiveness. See 9.3.2 and 9.3.3 for Review
+Inputs and Results. These include changes in
+external and internal issues relevant to ISMS,
+change in needs and expectations of interested
+parties under ISMS and more. Evidence:
+management review meeting minutes and
+report(s).
+22.21. Is there an impact to continual Clause 10.1 Continual Improvement should be
+improvement actions or documented with identification and
+activities? improvement. Evidence: improvement records/logs
+or results of review.
+22.22. Is there a need to initiate a Clause 10.2 Nonconformity (NC) and CA.
+nonconformity and corrective Nonconformity shall be documented with action
+action (CA)? taken to control and correct, determine cause,
+assess potential for similar issues, etc. CA will be
+appropriate to the effects of NCs. Evidence: NC
+and CA records.
+22.23. Adequate Controls Annex A: Appropriate evidence of adequate
+controls should be demonstrated throughout the
+ISMS. Refer to full list under Annex A. These
+include but are not limited to Access Controls,
+Cryptography, Physical Security, Supplier
+Relationships.
+23. Usability Analysis (ISO 32366-1, ISO 32366-3) ☐ N/A
+23.0. Does the change impact usability? If not, indicate N/A and leave remaining questions in
+this section blank? Provide rationale: Click or tap here to enter text.
+23.1. How has usability incorporated Include explainability, transparency,
+AI-specific risks and interpretability, bias.
+requirements?
+23.2. Are usability studies required to Provide details.
+support this change?
+23.3. Are processes/procedures Provide details.
+adequately defined for usability
+to incorporate AI related medical
+devices.
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 42 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+24. Safety & Performance and Deployment ☐ N/A
+24.0. Does the change impact safety and performance? If not, indicate N/A and leave
+remaining questions in this section blank? Provide rationale: Click or tap here to enter text.
+24.1. What measures/ metrics Provide details. Provide rationale for the
+are used to demonstrate appropriateness of use of the measures/metrics
+performance? chosen.
+24.2. What claims are Provide details. Reference any IFU and
+communicated to users promotional material(s) including web-site with
+about safety and version control.
+performance?
+24.3. How will this change be Provide details.
+deployed to produce /
+clinical use?
+24.4. How will this change be Provide details.
+communicated to users /
+stakeholders?
+25. Post-market Performance Evaluation (clinical) ☐ N/A
+25.0. Does the change impact post-market performance? If not, indicate N/A and leave
+remaining questions in this section blank? Provide rationale: Click or tap here to enter text.
+25.1. Is there a change to post- Provide details.
+market plan(s),
+surveillance or monitoring
+to support this change?
+25.2. How is this change Provide details. How can this change be checked in
+monitored in use? post-production phase for safety and effectiveness?
+25.3. What level of human Provide details. Reference monitoring protocols,
+oversight (human in the PMS plans, etc.
+loop) is applied to this
+device and/or change?
+26. Pre-determined Change Control Plan ☐ N/A
+26.0. Does the change impact PCCP? If not, indicate N/A and leave remaining questions in
+this section blank? Provide rationale: Click or tap here to enter text.
+26.1. Is there an Authorised Yes/No, if Yes, define in what markets and regulatory
+PCCP in place? authorities have review/approved the PCCP.
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 43 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+Has this change been included in the scope of the
+authorised PCC? If yes, provide location/specific
+detail as to how it is included.
+26.2. Will this change Yes/No. Provide details. Identify all documents
+support/change a new or required for creation / update of PCCP for
+an authorised PCCP regulatory approval.
+necessary to be reviewed
+by regulatory authority?
+27. Post-market Software Monitoring, Logging and Reporting ☐ N/A
+27.0. Does the change impact monitoring, logging, reporting? If not, indicate N/A and leave
+remaining questions in this section blank? Provide rationale: Click or tap here to enter
+text.
+27.1. What level of access is Provide details. Reference, monitoring or
+available to software maintenance and vulnerability plan(s).
+developers/ engineers/
+legal manufacturer for
+monitoring, logging and
+reporting?
+27.2. How is the data reviewed, Provide details. Reference procedures or plan(s) as
+reported? applicable.
+27.3. Is the reporting, Provide details. Reference procedures or plan(s) as
+communication strategy applicable.
+adequate for the device
+including this change to
+the device?
+28. EU AI Act Regulation 2024/1689 (as amended) ☐N/A
+28.0. Indicate if the AI Act Regulatory Requirements for Medical Devices is required? If
+not, check N/A and leave the remaining questions blank.
+28.1. Identify the intended purpose Article 8 stipulates that high-risk AI systems under
+of the AI device/components the AI Act 2024/1689 must be subject to AI Act
+and identify if this is different rules and regulations. Under the proposed change
+from the intended purpose dated 16 Dec 2025, we have adopted the refined
+stated above for the product. changes assuming adoption in 2026, where they
+remove duplication and negative impact from
+overly burdensome regulatory frameworks,
+innovation and cost. According to the proposed
+changes, Chapter III, Section will be applicable to
+High-Risk AI systems, such as regulated AIeMD.
+They adopt horizontal requirements that reflect
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 44 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+those already set out in MDR/IVDR 2017/745 and
+2017/746 regulations.
+28.2. Article 9 – Risk Management Risk Management shall comply with the ISO 14971
+product and AI requirements already set out in this
+document. In additional fundamental rights are
+also included and should be considered as part of
+risk management ref. (Lynch et al. 2026).
+28.3. Article 10 – Data and Data Data used shall meet quality criteria and shall be
+Governance subject to data governance and management
+practices. This is reflected in the sections above.
+Examination of biases is highlighted in relation to
+fundamental rights and must be examined.
+Training, validation and test data sets shall be
+relevant, sufficiently representative and to be best
+extent possible, free of errors and complete in view
+of the intended purpose. Data sets shall take into
+account, geographical, contextual, behavioural, or
+functional setting in relations to intended use.
+28.4. Article 11 – Technical Technical documentation shall be drawn up and
+documentation maintained up to date. A single set of technical
+documents shall be drawn up under the
+MDR/IVDR (not a separate set for AI regulatory
+compliance).
+28.5. Article 12 – Record keeping Recording of logging for post-market surveillance
+shall be implemented. Logging capabilities should
+provide the recording period of each use of the
+system (start date, and time and end date and time
+of each use), database against which input data
+was checked by the system, input data for which the
+search led to a match and identification of the
+persons involved in the verification of the results.
+28.6. Article 13 – Transparency and Transparency shall enable deployers to interpret
+provision of information to systems output and use it appropriately. IFU shall
+deployers contain at least the identity and contact details of
+the prover or authorised representative, the
+characteristics, capabilities and limitations of
+performance, the intended purpose, level of
+accuracy and metrics used for robustness and
+cybersecurity (refer Article 15) against which the
+system has been tested and validated and what can
+be expected – known and foreseeable
+circumstances that may impact accuracy,
+robustness and cybersecurity as well as residual
+risks, technical capabilities and characteristics to
+explain the output.
+28.7. Article 14 – Human oversight Ensure the system can be overseen by human-in the
+loop in order to prevent or minimise risk to health,
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 45 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+safety or fundamental rights that may emerge. This
+shall be commensurate with the risk, level of
+autonomy and context. The persons performing
+such oversight will be aware of the capacities,
+limitations and potential to rely or over-rely on
+output as well as provision of tools to support
+interpretation of outputs correctly.
+28.8. Article 15 – Accuracy, Achieve appropriate level of accuracy, robustness
+robustness and cybersecurity and cybersecurity to perform consistently
+throughout their lifecycle. Address technical
+methods to measure same. Declare in IFU.
+Technical and organisation measures for resilience
+to failures and errors shall be taken. Robustness
+can be achieved through redundancy solutions
+(back-up, fail-safe plans kick in). Feedback loops
+or appropriate measures are adopted for
+continuous/continual learning system. Security
+risks are mitigated as identified above. Security
+shall address measures to prevent, detect, respond,
+resolve and control attacks.
+29. Sustainability ☐ N/A
+29.0. Does the change impact the sustainability policy or requirements? If not, indicate N/A
+and leave remaining questions in this section blank? Provide rationale: Click or tap here to
+enter text.
+29.1. Have requirements been Provide details. Reference procedures or plan(s) as
+determined for sustainability applicable. Review the EU AI Act (2024), Ecodesign
+objectives? for Sustainable products Regulation ESPR, 2024 and
+the Corporate Sustainability Due Diligence
+Directive, CSDDD, 2024. Identify guidance or
+requirements published for energy-efficiency
+standards and sustainable AI design that are
+applicable to AI-enabled medical devices (AIeMD).
+Identify policy or procedures for sustainability
+incorporated by the organisation.
+29.2. How does this change support Provide details. Reference procedures or plan(s) as
+sustainability objectives? applicable.
+30. Technical Documentation, DMR and DHR ☐ N/A
+30.0. Does the change impact technical documentation? If not, indicate N/A and leave
+remaining questions in this section blank? Provide rationale: Click or tap here to enter text.
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 46 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+30.1. Is the Device History Record Provide details
+(DHR) impacted by this change?
+30.2. Is the Device Master Record Provide details
+(DHR) impacted by this change?
+30.3. Are the Product History Records Provide details
+or Templates impacted by this
+change?
+30.4. Is the Declaration of Conformity Provide details
+impacted by this change?
+30.5. Has the technical documentation Provide details
+been updated with full traceability
+to this change?
+31. Checklist of Deliverables arising from this Change ☐ N/A
+31.0. Is a checklist for deliverables required to support this change? If not, indicate N/A and
+leave remaining questions in this section blank? Provide rationale: Click or tap here to enter
+text.
+Based on the review performed, identify the deliverables necessary to review/updates required
+for completion prior to implementation of change described.
+31.1. Risk Management File ☐ n/a Provide details
+31.2. Dataset Inventory and Data ☐ n/a Provide details
+Quality Report
+31.3. AI Model Card and ☐ n/a Provide details
+reproducibility package
+31.4. Test Protocols and Reports ☐ n/a Provide details.
+31.5. Maintenance Plan / ☐ n/a Provide details.
+Vulnerability Management Plan
+31.6. Cybersecurity risk assessment, ☐ n/a Provide details.
+mitigation and response plan
+31.7. Vulnerability Management Plan ☐ n/a Provide details.
+31.8. Post-market surveillance and ☐ n/a Provide details.
+monitoring Plan
+31.9. User documentation, IFU, ☐ n/a Provide details.
+training materials, labelling,
+limitations and intended use
+31.10. Clinical evidence ☐ n/a Provide details. Study protocols, results
+and statistical analysis
+31.11. PCCP documents ☐ n/a Provide details.
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 47 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+31.12. Other: Click or tap here to enter ☐ n/a Provide details.
+text.
+Add additional rows as required
+32. Regulatory Approval and Conformity Assessment / Certification ☐ N/A
+32.0. Is a regulatory review required to support this change? If not, indicate N/A and leave
+remaining questions in this section blank? Provide rationale: Click or tap here to enter text.
+32.1. Regulatory Assessment of ☐ Significant Change
+Change for Significance/
+reporting ☐ Non-Significant Change
+☐ Note to File / QMS Change to be notified to
+authorities at next Recertification/Surveillance Audit
+Is this change deemed significant and if so, what
+authorities require reporting prior to implementation
+of the change, where PCCP does not already cover the
+scope of this change?
+Provide rationale: Click or tap here to enter text.
+32.2. Is a new conformity Provide details.
+assessment required by
+regulatory body (FDA,
+Notified Body, other)?
+32.3. Has regulatory approval been ☐ Yes, via Authorised PCCP – change is included in
+granted for this change scope.
+☐ Yes, via Authorised PCCP – change not included in
+scope – updated authorised PCCP required
+☐ Yes, granted and attached as a significant change.
+☐ Yes, pending approval; change to regulatory
+approval is required prior to implementation.
+☐ No, approval is not required – minor change only
+with Note to file or equivalent as per Quality/AI
+Management System
+☐ Attach or reference file/location with approval:
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 48 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+32.4. Have minimum AI Yes, minimum thresholds maintained
+performance thresholds been
+reviewed and maintained as No, minimum thresholds are not maintained and
+documented by regulatory communication is necessary to relevant stakeholders
+authority?
+Provide list of minimum thresholds reviewed and
+maintained: e.g., Accuracy (mean, macro, etc.),
+Sensitivity (recall), Specificity, F1, AUC, etc.
+32.5. Are all relevant regulations and ☐ EU AI Act
+standards addressed and ☐ MDR 2017/745
+General Safety and ☐ IVDR 2017/746
+Performance Requirements ☐ Accessibility
+checklists (GSPR) or Essential ☐ Interoperability
+Requirements (ER) or relevant ☐ Data Protection
+compliance documents updated ☐ Security
+accordingly?
+☐ RED
+Add others as appropriate to territory and device type
+32.6. Is an update required to the Provide reference to DoC document(s) review/updated
+Declaration of Conformity and provide rationale if update is not deemed
+(DoC) for the AIeMD? necessary.
+33. Change Approval to Implement ☐ N/A
+33.0. Is approval required under this form? If not, indicate N/A and identify method for
+approval of change. Click or tap here to enter text. This form can be used as a supplemental
+checklist as part of an existing eQMS with change control, where approval is documented
+within the eQMS itself.
+Role Name Signature Date
+Author(s) e-signature is equivalent
+to wet (ink) signature
+Regulatory Affairs e-signature is equivalent
+to wet (ink) signature
+Quality Assurance e-signature is equivalent
+to wet (ink) signature
+Clinical/Medical e-signature is equivalent
+to wet (ink) signature
+Software Lead e-signature is equivalent
+to wet (ink) signature
+AI Governance Officer e-signature is equivalent
+to wet (ink) signature
+Data Protection Officer e-signature is equivalent
+to wet (ink) signature
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 49 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+Other Click or tap here to enter ☐ n/a Provide details.
+text. to wet (ink) signature
+Add rows as required
+34. Implementation & Effectiveness Plan ☐ N/A
+34.0. Is an effectiveness plan required? If not, indicate N/A and identify method for
+effectiveness checking of changes. Click or tap here to enter text.
+34.1. Define Implementation Plan define or reference relevant change plan/ quality plan
+and Targets or AI / Software Development plan with a list of
+tasks/activities required to complete this change
+including identification of assigned owners and target
+dates. A Gantt chart may support this deliverable.
+34.2. Are any change management Provide details. For example, Process Assessment
+maturity assessments used to Model (PAM) (e.g., ISO/IEC 30105-2:2024) or
+support improved projects, Process Reference Models (e.g., MDevSPICE®) – e.g.,
+project safety and PD performance evaluation of devices
+performance? demonstrates high performance and safety profile as
+documented within Management Review’s assessment
+of internal audits, complaints, data analysis, etc.
+34.3. Identify effectiveness planning Document or reference how the change will be
+and method for tracking to assessed for effectiveness and accomplishment of
+completion. suitable QMS/AI governance objectives and
+procedures.
+34.4. Target date for completion dd/mmm/yyyy
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 50 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+35. Appendix: Additional Guidance
+Figure 2 Where does AI fit within SDLC? (St John Lynch et al. 2025)
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 51 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+Figure 3 Example of AI System Lifecycle with Test-Specific Processes
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 52 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+Figure 4 Example AI Model Risks and Test Treatment. Ref. Annex C, (ISO/IEC/DTS-42119-2 2025)
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 53 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+Figure 5 Overview of Test Documentation
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 54 of 55
+AIeMD Change CR No.: 0001
+Management Assessment Template No.: TMP-001
+Revision 01
+36. References
+EN ISO/IEC-62304. (2015). Medical device software: software life-cycle processes. IEC, ed. , 30
+November 2015, p.84.
+IEC-81001-5-1. (2021). Health software and health IT systems safety, effectiveness and security. Part
+5-1, Security. Activities in the product life cycle. IEC, 2021, pp.1–66.
+ISO/DTS-24971-2. (2025). Medical devices-Guidance on the application of ISO 14971-Part 2: Machine
+learning in artificial intelligence (draft) Technical Specification ISO/DTS 24971-2:2025. Available
+from: www.iso.org.
+ISO/IEC/DTS-42119-2. (2025). AI - Testing of AI Part 2: Overview of testing AI Systems. Available
+from: www.iso.org.
+Lynch, N.S.J., Loughran, R., McHugh, M. and McCaffrey, F. (2026). Trustworthy Artificial Intelligence
+in Healthcare: A Proposed Framework. In: Yilmaz, M. et al., eds. Systems, Software and Services
+Process Improvement. Cham: Springer Nature Switzerland, pp.69–90.
+St John Lynch, N., McHugh, M., Loughran, R. 1, McCaffrey, F. 1 and Kowalski, D. 2. (2025). Evaluating
+Pre-trained 3rd Party AI Models in Medical Device Software Development for Responsible and
+Ethical Use. In: 33rd International Artificial Intelligence and Cognitive Science. Dublin.
+Table of Figures
+Figure 1 PD IEC TR 80002-1:2009 (current Jan 2026) ........................................................................... 33
+Figure 2 Where does AI fit within SDLC? (St John Lynch et al. 2025) ................................................... 51
+Figure 3 Example of AI System Lifecycle with Test-Specific Processes ................................................. 52
+Figure 4 Example AI Model Risks and Test Treatment. Ref. Annex C, (ISO/IEC/DTS-42119-2 2025) ... 53
+Figure 5 Overview of Test Documentation ........................................................................................... 54
+© N. St John Lynch, DkIT 2025-2026 Confidential Page 55 of 55

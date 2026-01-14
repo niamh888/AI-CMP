@@ -1,6 +1,7 @@
 import re
 
-text = '''[paste the full text here]'''
+with open('pdf_text.txt', 'r', encoding='utf-8') as f:
+    text = f.read()
 
 sections = {}
 current_section = None
