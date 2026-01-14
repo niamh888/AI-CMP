@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Device Compliance Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Compliance Review for AI-Enabled Medical Devices</h1>
+    </header>
+    <main>
+        <section id="upload-section">
+            <h2>Upload Compliance Questions Document</h2>
+            <input type="file" id="wordFile" accept=".docx,.doc">
+            <button id="parseBtn">Parse Questions</button>
+        </section>
+        <section id="review-section" style="display: none;">
+            <h2>Compliance Review Form</h2>
+            <form id="reviewForm">
+                <div id="questionsContainer"></div>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
