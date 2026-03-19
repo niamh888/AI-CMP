@@ -1,3 +1,6 @@
+Change assessment · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,11 +118,27 @@ textarea:focus,input:focus{border-color:var(--accent)}
 .sec-count{font-size:11px;color:var(--ink-muted);font-weight:400;margin-left:6px}
 .export-group{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .export-label{font-size:12px;color:var(--ink-muted);font-weight:500}
+/* N/A SECTION */
+.na-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:500;letter-spacing:.04em;background:#f0ece8;color:var(--ink-muted);border:1px solid var(--border);margin-left:8px;vertical-align:middle}
+.section-group.na-section .section-toggle{background:#f6f4f0;border-color:#d8d3cb;opacity:.8}
+.section-group.na-section .section-toggle:hover{background:#ede9e2;border-color:#c8c0b4;opacity:1}
+.na-banner{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:12px 14px;background:#f6f4f0;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.na-banner-left{display:flex;flex-direction:column;gap:4px}
+.na-banner-title{font-size:12px;font-weight:500;color:var(--ink-muted)}
+.na-reason{font-size:12px;color:var(--ink-muted);font-style:italic;line-height:1.5;max-width:520px}
+.na-reason-edit{font-size:12px;line-height:1.5;min-height:48px;width:100%;max-width:520px;border-color:#d8d3cb;background:white;border-radius:var(--r);padding:6px 10px;resize:vertical;font-family:'DM Sans',sans-serif;color:var(--ink);outline:none}
+.na-reason-edit:focus{border-color:var(--accent)}
+.na-banner-actions{display:flex;gap:6px;flex-shrink:0;margin-top:2px}
+.na-override-btn{padding:4px 11px;font-size:12px;border-radius:var(--r);border:1px solid #d8d3cb;background:white;color:var(--ink-muted);cursor:pointer;transition:all .15s;font-weight:500;font-family:'DM Sans',sans-serif}
+.na-override-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-light)}
+.na-override-btn.confirm{border-color:var(--success-border);color:var(--success);background:var(--success-light)}
+.na-override-btn.confirm:hover{opacity:.8}
+.section-body.na-collapsed .qa-block{display:none}
 @media(max-width:640px){nav{padding:0 1rem}.form-wrap,.assess-wrap,.admin-wrap{padding-left:1rem;padding-right:1rem}.hero{padding:3rem 1rem 2rem}.summary-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <div class="logo">Change<span>IQ</span></div>
   <div style="display:flex;gap:10px">
@@ -127,7 +146,7 @@ textarea:focus,input:focus{border-color:var(--accent)}
     <button class="btn btn-ghost" onclick="showView('admin-login')">Admin</button>
   </div>
 </nav>
-
+ 
 <!-- HOME -->
 <div class="view active" id="view-home">
   <div class="hero">
@@ -158,7 +177,7 @@ textarea:focus,input:focus{border-color:var(--accent)}
     <button class="btn btn-primary" onclick="runAssessment()" id="assess-btn" style="width:100%;justify-content:center;padding:12px 0;font-size:14px">Run Assessment</button>
   </div>
 </div>
-
+ 
 <!-- ASSESSMENT -->
 <div class="view" id="view-assessment">
   <div class="assess-header">
@@ -177,6 +196,7 @@ textarea:focus,input:focus{border-color:var(--accent)}
       <div class="summary-card"><div class="s-label">Edited</div><div class="s-val s-edited" id="cnt-edited">0</div></div>
       <div class="summary-card"><div class="s-label">Rejected</div><div class="s-val s-rejected" id="cnt-rejected">0</div></div>
       <div class="summary-card"><div class="s-label">Pending</div><div class="s-val s-pending" id="cnt-pending">0</div></div>
+      <div class="summary-card" style="grid-column:span 4;display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem"><span style="font-size:12px;color:var(--ink-muted)"><strong style="color:var(--ink-muted)" id="cnt-na">0</strong> sections marked N/A by agent</span><button class="btn btn-ghost btn-sm" onclick="acceptAllAnswers()">Accept all pending</button></div>
     </div>
     <div class="export-bar">
       <div class="export-group">
@@ -190,7 +210,7 @@ textarea:focus,input:focus{border-color:var(--accent)}
     <div id="sections-output"></div>
   </div>
 </div>
-
+ 
 <!-- ADMIN LOGIN -->
 <div class="view" id="view-admin-login">
   <div class="admin-wrap">
@@ -203,7 +223,7 @@ textarea:focus,input:focus{border-color:var(--accent)}
     </div>
   </div>
 </div>
-
+ 
 <!-- ADMIN PANEL -->
 <div class="view" id="view-admin">
   <div class="admin-wrap">
@@ -225,11 +245,11 @@ textarea:focus,input:focus{border-color:var(--accent)}
     <div class="save-banner" id="save-banner">✓ Template saved</div>
   </div>
 </div>
-
+ 
 <script>
 const ADMIN_PW='admin123';
 const TKEY='changeiq_cmp_v3';
-
+ 
 const DEFAULT_TEMPLATE=`## Device Identification
 What is the change title and who is the change originator / requestor?
 What is the date of submission and the current product lifecycle phase (e.g. Development, Post Design Freeze, Post-Market)?
@@ -336,24 +356,25 @@ Has regulatory approval been granted, is it pending, or is this a minor change w
 Identify the required approvers for this change (Author, Regulatory Affairs, QA, Clinical/Medical, Software Lead, AI Governance Officer, Data Protection Officer) and confirm all approvals are documented with date and signature.
 ## Implementation and Effectiveness Plan
 Define the implementation plan with tasks, owners, and target dates. How will the effectiveness of this change be assessed against QMS and AI governance objectives?`;
-
+ 
 let uploadedFiles=[];
 let answerState={};
 let parsedSections=[];
-
+let sectionNaState={};  // si -> {na: bool, reason: string, editing: bool}
+ 
 function showView(n){
   document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
   const map={home:'view-home',assessment:'view-assessment','admin-login':'view-admin-login',admin:'view-admin'};
   document.getElementById(map[n]).classList.add('active');
   window.scrollTo(0,0);
 }
-
+ 
 // FILE HANDLING
 const dz=document.getElementById('dropzone');
 dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag')});
 dz.addEventListener('dragleave',()=>dz.classList.remove('drag'));
 dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag');if(e.dataTransfer.files.length)handleFiles(e.dataTransfer.files)});
-
+ 
 async function handleFiles(list){
   for(const f of Array.from(list)){
     if(f.size>10*1024*1024){showError(`"${f.name}" exceeds 10 MB.`);continue}
@@ -379,7 +400,7 @@ function renderFileList(){
   w.innerHTML=`<div class="file-list">${uploadedFiles.map(f=>`<div class="file-item"><div class="file-item-l"><span class="ftype ftype-${f.type}">${f.type.toUpperCase()}</span><span class="fname">${esc(f.name)}</span><span class="fsize">${(f.size/1024).toFixed(0)} KB</span></div><button class="fremove" onclick="removeFile('${esc(f.name)}')">×</button></div>`).join('')}</div><p style="font-size:12px;color:var(--ink-muted);margin-top:5px;text-align:right">${uploadedFiles.length} file${uploadedFiles.length>1?'s':''} ready</p>`;
 }
 function readB64(f){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(f)})}
-
+ 
 // TEMPLATE
 function getTemplate(){return localStorage.getItem(TKEY)||DEFAULT_TEMPLATE}
 function parseTemplate(){
@@ -392,7 +413,7 @@ function parseTemplate(){
   if(cur)sections.push(cur);
   return sections;
 }
-
+ 
 // RUN ASSESSMENT
 async function runAssessment(){
   const desc=document.getElementById('changeDesc').value.trim();
@@ -400,30 +421,32 @@ async function runAssessment(){
   hideError();
   const btn=document.getElementById('assess-btn');
   btn.disabled=true;btn.innerHTML='<span class="spinner"></span> Analysing…';
-
+ 
   parsedSections=parseTemplate();
   const totalQ=parsedSections.reduce((a,s)=>a+s.questions.length,0);
   if(!totalQ){showError('No questions in template.');btn.disabled=false;btn.innerHTML='Run Assessment';return}
-
-  answerState={};
-
+ 
+  answerState={};sectionNaState={};
+ 
   const docs=uploadedFiles.length?uploadedFiles.map(f=>f.name).join(', '):'None uploaded';
   document.getElementById('assess-subtitle').textContent=`${parsedSections.length} sections · ${totalQ} questions`;
   document.getElementById('assess-meta').innerHTML=`<div><strong>Documents</strong> ${esc(docs)}</div><div><strong>Questions</strong> ${totalQ}</div><div><strong>Date</strong> ${new Date().toLocaleDateString('en-IE',{day:'numeric',month:'short',year:'numeric'})}</div>`;
-
+ 
   const out=document.getElementById('sections-output');out.innerHTML='';
   let gq=0;
-
+ 
+  // Build section skeleton
   parsedSections.forEach((sec,si)=>{
+    sectionNaState[si]={na:false,reason:'',editing:false};
     const grp=document.createElement('div');
     grp.className='section-group';grp.id=`sec-${si}`;
-    grp.innerHTML=`<div class="section-toggle" onclick="toggleSec(${si})"><span>${esc(sec.title)}<span class="sec-count" id="sc-${si}"></span></span><span class="section-toggle-arrow">▾</span></div><div class="section-body" id="sb-${si}"></div>`;
+    grp.innerHTML=`<div class="section-toggle" onclick="toggleSec(${si})"><span id="sec-title-${si}">${esc(sec.title)}</span><span class="section-toggle-arrow">▾</span></div><div class="section-body" id="sb-${si}"><div id="na-banner-${si}"></div></div>`;
     out.appendChild(grp);
     const body=document.getElementById(`sb-${si}`);
     sec.questions.forEach((q,qi)=>{
       gq++;
       const k=`${si}-${qi}`;
-      answerState[k]={text:'',status:'pending',note:''};
+      answerState[k]={text:'',status:'pending',note:'',editing:false};
       const blk=document.createElement('div');
       blk.className='qa-block';blk.id=`qb-${k}`;
       blk.innerHTML=`
@@ -447,28 +470,64 @@ async function runAssessment(){
       body.appendChild(blk);
     });
   });
-
+ 
   toggleSec(0);
   showView('assessment');
   updateSteps(3);
-
-  // Build API payload
-  const allQs=[];
-  parsedSections.forEach(s=>s.questions.forEach(q=>allQs.push(q)));
-  const qList=allQs.map((q,i)=>`Q${i+1}: ${q}`).join('\n');
-
+ 
+  // Build shared context
   const pdfs=uploadedFiles.filter(f=>f.type==='pdf');
   const docxs=uploadedFiles.filter(f=>f.type==='docx');
   let docxTxt='';
   docxs.forEach(f=>{docxTxt+=`\n\n--- DOCUMENT: ${f.name} ---\n${f.data.substring(0,5000)}\n---`});
-
-  const userTxt=`PROPOSED CHANGE DESCRIPTION:\n${desc}${docxTxt}\n\nAnswer each question below using ONLY the information provided. Be specific, professional, and concise. If information is insufficient, state what is known and note what additional information would be required. Output ONLY the answer text for each question — no numbering, no labels. Separate each answer with exactly: |||SPLIT|||\n\n${qList}`;
-
+ 
+  const changeContext=`PROPOSED CHANGE DESCRIPTION:\n${desc}${docxTxt}`;
+ 
+  // ── PHASE 1: Detect N/A sections ─────────────────────────────────────────
+  btn.innerHTML='<span class="spinner"></span> Identifying N/A sections…';
+  const sectionList=parsedSections.map((s,i)=>`${i}: ${s.title}`).join('\n');
+  const naPrompt=`${changeContext}\n\nBelow is a list of assessment sections. Based ONLY on the change description above, identify which sections are NOT APPLICABLE to this change and would typically be marked N/A by a regulatory reviewer.\n\nFor each N/A section, provide a concise one-sentence reason. Only flag a section as N/A if it is clearly not relevant (e.g. "AI Training / Re-Training" is N/A if the change does not involve any model retraining; "Third-Party Pre-Trained AI Model Evaluation (SOUP)" is N/A if no SOUP is used). When in doubt, do NOT flag as N/A — it is better to answer than to skip.\n\nRespond ONLY with a JSON array like:\n[{"index":2,"reason":"No AI training or retraining is involved in this change."},{"index":5,"reason":"No third-party pre-trained model is used."}]\n\nIf no sections are N/A, respond with: []\n\nSections:\n${sectionList}`;
+ 
+  let naContent=[];
+  pdfs.forEach(f=>naContent.push({type:'document',source:{type:'base64',media_type:'application/pdf',data:f.data}}));
+  naContent.push({type:'text',text:naPrompt});
+  if(!pdfs.length)naContent=naPrompt;
+ 
+  try{
+    const naResp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,
+        system:'You are an expert AI medical device regulatory consultant. Respond ONLY with valid JSON — no markdown, no explanation.',
+        messages:[{role:'user',content:naContent}]})
+    });
+    const naData=await naResp.json();
+    if(!naData.error){
+      const rawText=naData.content.map(b=>b.text||'').join('').replace(/```json|```/g,'').trim();
+      const naList=JSON.parse(rawText);
+      naList.forEach(({index,reason})=>{
+        if(sectionNaState[index]!==undefined){
+          sectionNaState[index].na=true;
+          sectionNaState[index].reason=reason||'Not applicable to this change.';
+          renderNaBanner(index);
+        }
+      });
+      updateCounters();
+    }
+  } catch(e){console.warn('N/A detection failed, continuing.',e)}
+ 
+  // ── PHASE 2: Generate answers for non-N/A sections ────────────────────────
+  btn.innerHTML='<span class="spinner"></span> Generating answers…';
+  const allQs=[];
+  parsedSections.forEach(s=>s.questions.forEach(q=>allQs.push(q)));
+  const qList=allQs.map((q,i)=>`Q${i+1}: ${q}`).join('\n');
+ 
   let content=[];
   pdfs.forEach(f=>content.push({type:'document',source:{type:'base64',media_type:'application/pdf',data:f.data}}));
+  const userTxt=`${changeContext}\n\nAnswer each question below using ONLY the information provided. Be specific, professional, and concise. If information is insufficient, state what is known and note what additional information would be required. Output ONLY the answer text for each question — no numbering, no labels. Separate each answer with exactly: |||SPLIT|||\n\n${qList}`;
   content.push({type:'text',text:userTxt});
   if(!pdfs.length)content=userTxt;
-
+ 
   try{
     const resp=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
@@ -510,8 +569,105 @@ async function runAssessment(){
   }
   btn.disabled=false;btn.innerHTML='Run Assessment';
 }
-
-// ANSWER ACTIONS
+ 
+// N/A SECTION FUNCTIONS
+function renderNaBanner(si){
+  const ns=sectionNaState[si];
+  const banner=document.getElementById(`na-banner-${si}`);
+  const grp=document.getElementById(`sec-${si}`);
+  const titleEl=document.getElementById(`sec-title-${si}`);
+  const body=document.getElementById(`sb-${si}`);
+  if(!banner||!grp||!titleEl)return;
+ 
+  if(ns.na){
+    grp.classList.add('na-section');
+    titleEl.innerHTML=`${esc(parsedSections[si].title)}<span class="na-badge">N/A</span>`;
+    body.classList.add('na-collapsed');
+ 
+    if(ns.editing){
+      banner.innerHTML=`
+        <div class="na-banner">
+          <div class="na-banner-left" style="flex:1">
+            <div class="na-banner-title">Agent rationale for N/A — edit to override:</div>
+            <textarea class="na-reason-edit" id="na-reason-input-${si}">${esc(ns.reason)}</textarea>
+          </div>
+          <div class="na-banner-actions">
+            <button class="na-override-btn confirm" onclick="saveNaReason(${si})">✓ Save</button>
+            <button class="na-override-btn" onclick="overrideNa(${si})">Mark as applicable</button>
+          </div>
+        </div>`;
+    } else {
+      banner.innerHTML=`
+        <div class="na-banner">
+          <div class="na-banner-left">
+            <div class="na-banner-title">Agent has marked this section N/A</div>
+            <div class="na-reason">${esc(ns.reason)}</div>
+          </div>
+          <div class="na-banner-actions">
+            <button class="na-override-btn" onclick="editNaReason(${si})">✎ Edit reason</button>
+            <button class="na-override-btn" onclick="overrideNa(${si})">Mark as applicable</button>
+          </div>
+        </div>`;
+    }
+  } else {
+    grp.classList.remove('na-section');
+    titleEl.innerHTML=`${esc(parsedSections[si].title)}<span class="sec-count" id="sc-${si}"></span>`;
+    body.classList.remove('na-collapsed');
+    if(ns.reason){
+      // Show a subtle "was N/A, overridden" note
+      banner.innerHTML=`<div style="padding:7px 14px;background:#f6f4f0;border-bottom:1px solid var(--border);font-size:11px;color:var(--ink-faint);display:flex;justify-content:space-between;align-items:center">
+        <span>Previously marked N/A — now included</span>
+        <button class="na-override-btn" style="font-size:11px;padding:2px 8px" onclick="restoreNa(${si})">Restore N/A</button>
+      </div>`;
+    } else {
+      banner.innerHTML='';
+    }
+  }
+}
+ 
+function editNaReason(si){
+  sectionNaState[si].editing=true;
+  renderNaBanner(si);
+  setTimeout(()=>{const el=document.getElementById(`na-reason-input-${si}`);if(el)el.focus()},50);
+}
+ 
+function saveNaReason(si){
+  const el=document.getElementById(`na-reason-input-${si}`);
+  if(el)sectionNaState[si].reason=el.value.trim()||sectionNaState[si].reason;
+  sectionNaState[si].editing=false;
+  renderNaBanner(si);
+  updateCounters();
+}
+ 
+function overrideNa(si){
+  sectionNaState[si].na=false;
+  sectionNaState[si].editing=false;
+  renderNaBanner(si);
+  // Open the section so user can see the questions
+  const grp=document.getElementById(`sec-${si}`);
+  if(grp&&!grp.classList.contains('open'))toggleSec(si);
+  updateCounters();
+}
+ 
+function restoreNa(si){
+  sectionNaState[si].na=true;
+  renderNaBanner(si);
+  updateCounters();
+}
+ 
+function acceptAllAnswers(){
+  parsedSections.forEach((sec,si)=>{
+    if(sectionNaState[si]&&sectionNaState[si].na)return;
+    sec.questions.forEach((_,qi)=>{
+      const k=`${si}-${qi}`;
+      if(answerState[k]&&answerState[k].status==='pending'){
+        answerState[k].status='accepted';
+        renderState(k);
+      }
+    });
+  });
+  updateCounters();
+}
 function setStatus(k,status){
   const s=answerState[k];if(!s)return;
   if(s.status===status){s.status='pending'}
@@ -525,7 +681,7 @@ function setStatus(k,status){
   }
   renderState(k);updateCounters();
 }
-
+ 
 function toggleEdit(k){
   const s=answerState[k];if(!s)return;
   if(s.editing){
@@ -539,7 +695,7 @@ function toggleEdit(k){
   }
   renderState(k);updateCounters();
 }
-
+ 
 function renderState(k){
   const s=answerState[k];
   const atEl=document.getElementById(`at-${k}`);
@@ -572,54 +728,73 @@ function renderState(k){
     if(bdg)bdg.innerHTML='';
   }
 }
-
+ 
 function updateCounters(){
   const vals=Object.values(answerState);
-  const acc=vals.filter(s=>s.status==='accepted').length;
-  const rej=vals.filter(s=>s.status==='rejected').length;
-  const edt=vals.filter(s=>s.status==='edited').length;
-  const pnd=vals.filter(s=>s.status==='pending'||s.status==='editing').length;
+  // Only count answers for non-N/A sections
+  const activeVals=vals.filter((_,i)=>{
+    const keys=Object.keys(answerState);
+    const key=keys[i];
+    const si=parseInt(key.split('-')[0]);
+    return !sectionNaState[si]||!sectionNaState[si].na;
+  });
+  const acc=activeVals.filter(s=>s.status==='accepted').length;
+  const rej=activeVals.filter(s=>s.status==='rejected').length;
+  const edt=activeVals.filter(s=>s.status==='edited').length;
+  const pnd=activeVals.filter(s=>s.status==='pending'||s.status==='editing').length;
   const rev=acc+rej+edt;
-  const tot=vals.length;
+  const tot=activeVals.length;
+  const naCount=Object.values(sectionNaState).filter(s=>s.na).length;
   document.getElementById('cnt-accepted').textContent=acc;
   document.getElementById('cnt-rejected').textContent=rej;
   document.getElementById('cnt-edited').textContent=edt;
   document.getElementById('cnt-pending').textContent=pnd;
+  document.getElementById('cnt-na').textContent=naCount;
   document.getElementById('progress-text').textContent=`${rev} / ${tot} reviewed`;
   document.getElementById('progress-fill').style.width=tot?`${(rev/tot)*100}%`:'0%';
   parsedSections.forEach((sec,si)=>{
+    if(sectionNaState[si]&&sectionNaState[si].na)return;
     const tot=sec.questions.length;
     const done=sec.questions.filter((_,qi)=>{const s=answerState[`${si}-${qi}`];return s&&s.status!=='pending'&&s.status!=='editing'}).length;
     const el=document.getElementById(`sc-${si}`);
     if(el)el.textContent=done===tot?' ✓':` ${done}/${tot}`;
   });
 }
-
+ 
 function toggleSec(i){
   const el=document.getElementById(`sec-${i}`);
   if(el)el.classList.toggle('open');
 }
-
+ 
 // ── HELPERS ───────────────────────────────────────────────────────────────
 function buildExportData(){
-  return parsedSections.map((sec,si)=>({
-    title: sec.title,
-    questions: sec.questions.map((q,qi)=>{
-      const k=`${si}-${qi}`;
-      const s=answerState[k];
-      return { q, status: s?s.status:'pending', answer: s?s.text:'—', note: s&&s.note?s.note:'' };
-    })
-  }));
+  return parsedSections.map((sec,si)=>{
+    const ns=sectionNaState[si]||{na:false,reason:''};
+    return {
+      title: sec.title,
+      na: ns.na,
+      naReason: ns.reason,
+      questions: sec.questions.map((q,qi)=>{
+        const k=`${si}-${qi}`;
+        const s=answerState[k];
+        return { q, status: s?s.status:'pending', answer: s?s.text:'—', note: s&&s.note?s.note:'' };
+      })
+    };
+  });
 }
-
+ 
 function statusLabel(st){ return {accepted:'ACCEPTED',edited:'EDITED',rejected:'REJECTED',pending:'PENDING'}[st]||'PENDING'; }
-
+ 
 // ── TXT EXPORT ────────────────────────────────────────────────────────────
 function exportText(){
   const date=new Date().toLocaleDateString('en-IE',{day:'numeric',month:'long',year:'numeric'});
   let out=`AI CHANGE MANAGEMENT ASSESSMENT\nGenerated: ${date}\n${'═'.repeat(60)}\n`;
   buildExportData().forEach(sec=>{
-    out+=`\n\n${'─'.repeat(60)}\n${sec.title.toUpperCase()}\n${'─'.repeat(60)}\n`;
+    out+=`\n\n${'─'.repeat(60)}\n${sec.title.toUpperCase()}${sec.na?' [N/A]':''}\n${'─'.repeat(60)}\n`;
+    if(sec.na){
+      out+=`\nStatus: [N/A]\nRationale: ${sec.naReason||'Not applicable to this change.'}\n`;
+      return;
+    }
     sec.questions.forEach(({q,status,answer,note})=>{
       out+=`\nQ: ${q}\nStatus: [${statusLabel(status)}]\nA: ${answer}\n`;
       if(status==='rejected'&&note) out+=`Rejection note: ${note}\n`;
@@ -627,23 +802,23 @@ function exportText(){
   });
   downloadBlob(new Blob([out],{type:'text/plain'}),'CMP-Assessment.txt');
 }
-
+ 
 // ── DOCX EXPORT ───────────────────────────────────────────────────────────
 async function exportDocx(){
   const btn=event.target;btn.disabled=true;btn.textContent='…';
   try{
     const {Document,Packer,Paragraph,TextRun,Table,TableRow,TableCell,
            AlignmentType,BorderStyle,WidthType,ShadingType,HeadingLevel,VerticalAlign}=window.docx;
-
+ 
     const date=new Date().toLocaleDateString('en-IE',{day:'numeric',month:'long',year:'numeric'});
     const grayBorder={style:BorderStyle.SINGLE,size:1,color:'D0CBC2'};
     const borders={top:grayBorder,bottom:grayBorder,left:grayBorder,right:grayBorder};
     const cellPad={top:100,bottom:100,left:140,right:140};
     const tblW={size:9360,type:WidthType.DXA};
-
+ 
     const statusColors={accepted:'D6F0E1',edited:'FEF3CC',rejected:'FADADD',pending:'F2EFE9'};
     const statusText={accepted:'ACCEPTED',edited:'EDITED',rejected:'REJECTED',pending:'PENDING'};
-
+ 
     function hCell(text,w,fill='E8E2D8'){
       return new TableCell({borders,margins:cellPad,width:{size:w,type:WidthType.DXA},
         shading:{fill,type:ShadingType.CLEAR},verticalAlign:VerticalAlign.CENTER,
@@ -654,26 +829,45 @@ async function exportDocx(){
         shading:{fill,type:ShadingType.CLEAR},verticalAlign:VerticalAlign.TOP,
         children:[new Paragraph({children:[new TextRun({text:String(text||''),size:20,font:'Arial',color:'1A1714'})]})]});
     }
-
+ 
     const children=[];
-
+ 
     // Title block
     children.push(new Paragraph({alignment:AlignmentType.LEFT,spacing:{after:120},
       children:[new TextRun({text:'AI Change Management Assessment',bold:true,size:44,font:'Arial',color:'0F0E0D'})]}));
     children.push(new Paragraph({spacing:{after:360},
       children:[new TextRun({text:`Generated: ${date}`,size:20,font:'Arial',color:'6B6760'})]}));
-
+ 
     buildExportData().forEach(sec=>{
       // Section heading
       children.push(new Paragraph({spacing:{before:360,after:140},
         border:{bottom:{style:BorderStyle.SINGLE,size:6,color:'C8502A',space:1}},
-        children:[new TextRun({text:sec.title,bold:true,size:26,font:'Arial',color:'C8502A'})]}));
-
+        children:[
+          new TextRun({text:sec.title,bold:true,size:26,font:'Arial',color:'C8502A'}),
+          ...(sec.na?[new TextRun({text:'   N/A',bold:true,size:20,font:'Arial',color:'888078'})]:[])
+        ]}));
+ 
+      if(sec.na){
+        const naRow=new TableRow({children:[
+          new TableCell({borders,margins:cellPad,width:{size:2200,type:WidthType.DXA},
+            shading:{fill:'F0ECE8',type:ShadingType.CLEAR},
+            children:[new Paragraph({children:[new TextRun({text:'N/A — Not Applicable',bold:true,size:20,font:'Arial',color:'888078'})]})]
+          }),
+          new TableCell({borders,margins:cellPad,width:{size:7160,type:WidthType.DXA},
+            shading:{fill:'F6F4F0',type:ShadingType.CLEAR},
+            children:[new Paragraph({children:[new TextRun({text:sec.naReason||'Not applicable to this change.',size:20,font:'Arial',color:'6B6760',italics:true})]})]
+          })
+        ]});
+        children.push(new Table({width:tblW,columnWidths:[2200,7160],rows:[naRow]}));
+        children.push(new Paragraph({spacing:{after:60},children:[]}));
+        return;
+      }
+ 
       if(!sec.questions.length){
         children.push(new Paragraph({spacing:{after:120},children:[new TextRun({text:'No questions in this section.',size:20,font:'Arial',color:'B5B2AC',italics:true})]}));
         return;
       }
-
+ 
       // Table with Q / Status / Answer columns
       const rows=[new TableRow({children:[hCell('Question',3600),hCell('Status',900),hCell('Answer',4860)]})];
       sec.questions.forEach(({q,status,answer,note})=>{
@@ -682,22 +876,22 @@ async function exportDocx(){
         const answerText=status==='rejected'&&note?`${answer}\n\nRejection note: ${note}`:answer;
         rows.push(new TableRow({children:[dCell(q,3600),dCell(stText,900,fill),dCell(answerText,4860)]}));
       });
-
+ 
       children.push(new Table({width:tblW,columnWidths:[3600,900,4860],rows}));
       children.push(new Paragraph({spacing:{after:60},children:[]}));
     });
-
+ 
     const doc=new Document({
       styles:{default:{document:{run:{font:'Arial',size:20}}}},
       sections:[{properties:{page:{size:{width:12240,height:15840},margin:{top:1080,right:1080,bottom:1080,left:1080}}},children}]
     });
-
+ 
     const buf=await Packer.toBlob(doc);
     downloadBlob(buf,'CMP-Assessment.docx');
   } catch(e){console.error(e);alert('DOCX export failed: '+e.message);}
   finally{btn.disabled=false;btn.textContent='DOCX';}
 }
-
+ 
 // ── PDF EXPORT ────────────────────────────────────────────────────────────
 function exportPdf(){
   const btn=event.target;btn.disabled=true;btn.textContent='…';
@@ -709,14 +903,14 @@ function exportPdf(){
     const margin=45;
     const colW=pageW-margin*2;
     let y=margin;
-
+ 
     const date=new Date().toLocaleDateString('en-IE',{day:'numeric',month:'long',year:'numeric'});
-
+ 
     const statusFill={accepted:[214,240,225],edited:[254,243,204],rejected:[250,218,221],pending:[242,239,233]};
     const statusHex={accepted:'2a6e4a',edited:'8a6200',rejected:'9e2020',pending:'6b6760'};
-
+ 
     function checkPage(needed=20){if(y+needed>pageH-margin){doc.addPage();y=margin;drawHeader();}}
-
+ 
     function drawHeader(){
       doc.setFillColor(250,248,245);doc.rect(0,0,pageW,36,'F');
       doc.setFontSize(9);doc.setTextColor(107,103,96);
@@ -724,7 +918,7 @@ function exportPdf(){
       doc.text(date,pageW-margin,23,{align:'right'});
       doc.setDrawColor(224,219,210);doc.line(0,36,pageW,36);
     }
-
+ 
     // Title page header
     doc.setFontSize(22);doc.setFont('helvetica','bold');doc.setTextColor(15,14,13);
     doc.text('AI Change Management',margin,y+22);
@@ -732,26 +926,38 @@ function exportPdf(){
     doc.setFontSize(10);doc.setFont('helvetica','normal');doc.setTextColor(107,103,96);
     doc.text(`Generated: ${date}`,margin,y+70);
     y+=100;
-
+ 
     buildExportData().forEach(sec=>{
       checkPage(50);
-      // Section heading bar
-      doc.setFillColor(200,80,42);doc.rect(margin,y,colW,22,'F');
+      // Section heading bar — grey tint if N/A
+      if(sec.na){doc.setFillColor(176,170,160);}else{doc.setFillColor(200,80,42);}
+      doc.rect(margin,y,colW,22,'F');
       doc.setFontSize(10);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);
-      doc.text(sec.title,margin+8,y+15);
+      doc.text(sec.title+(sec.na?'  [N/A]':''),margin+8,y+15);
       y+=30;
-
+ 
+      if(sec.na){
+        checkPage(30);
+        doc.setFillColor(246,244,240);doc.rect(margin,y,colW,26,'F');
+        doc.setDrawColor(216,211,203);doc.rect(margin,y,colW,26,'S');
+        doc.setFontSize(8.5);doc.setFont('helvetica','italic');doc.setTextColor(107,103,96);
+        const naLines=doc.splitTextToSize(sec.naReason||'Not applicable to this change.',colW-16);
+        doc.text(naLines[0]||'',margin+8,y+17);
+        y+=34;
+        return;
+      }
+ 
       if(!sec.questions.length){checkPage(20);doc.setFontSize(9);doc.setFont('helvetica','italic');doc.setTextColor(181,178,172);doc.text('No questions in this section.',margin+4,y);y+=18;return;}
-
+ 
       sec.questions.forEach(({q,status,answer,note})=>{
         const answerFull=status==='rejected'&&note?`${answer}\n\nRejection note: ${note}`:answer;
-
+ 
         // Question label
         checkPage(30);
         doc.setFontSize(8.5);doc.setFont('helvetica','bold');doc.setTextColor(15,14,13);
         const qLines=doc.splitTextToSize(q,colW-10);
         qLines.forEach(line=>{checkPage(14);doc.text(line,margin+4,y);y+=13;});
-
+ 
         // Status badge
         const[fr,fg,fb]=statusFill[status]||statusFill.pending;
         const shex=statusHex[status]||statusHex.pending;
@@ -761,12 +967,12 @@ function exportPdf(){
         doc.setTextColor(parseInt(shex.substring(0,2),16),parseInt(shex.substring(2,4),16),parseInt(shex.substring(4,6),16));
         doc.text((status||'pending').toUpperCase(),margin+4+badgeW/2,y+10,{align:'center'});
         y+=20;
-
+ 
         // Answer text
         doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(26,23,20);
         const aLines=doc.splitTextToSize(answerFull||'—',colW-10);
         aLines.forEach(line=>{checkPage(14);doc.text(line,margin+4,y);y+=13;});
-
+ 
         // Separator
         checkPage(12);
         doc.setDrawColor(224,219,210);doc.line(margin,y+3,margin+colW,y+3);
@@ -774,20 +980,20 @@ function exportPdf(){
       });
       y+=8;
     });
-
+ 
     doc.save('CMP-Assessment.pdf');
   } catch(e){console.error(e);alert('PDF export failed: '+e.message);}
   finally{btn.disabled=false;btn.textContent='PDF';}
 }
-
+ 
 function downloadBlob(blob,filename){
   const url=URL.createObjectURL(blob);
   const a=document.createElement('a');a.href=url;a.download=filename;a.click();
   setTimeout(()=>URL.revokeObjectURL(url),10000);
 }
-
+ 
 function resetApp(){
-  uploadedFiles=[];answerState={};parsedSections=[];
+  uploadedFiles=[];answerState={};parsedSections=[];sectionNaState={};
   document.getElementById('changeDesc').value='';
   document.getElementById('file-list-wrap').innerHTML='';
   document.getElementById('fileInput').value='';
@@ -795,7 +1001,7 @@ function resetApp(){
   updateSteps(1);hideError();showView('home');
 }
 function updateSteps(a){[1,2,3].forEach(i=>{const el=document.getElementById('step'+i);el.className='step'+(i<a?' done':i===a?' active':'')})}
-
+ 
 function adminLogin(){
   const pw=document.getElementById('admin-pw').value;
   const err=document.getElementById('login-error');
@@ -811,7 +1017,7 @@ function saveTemplate(){
   const b=document.getElementById('save-banner');b.style.display='block';setTimeout(()=>b.style.display='none',2500);
 }
 function loadDefaultTemplate(){document.getElementById('template-editor').value=DEFAULT_TEMPLATE}
-
+ 
 function showError(m){const el=document.getElementById('error-box');el.textContent=m;el.style.display='block'}
 function hideError(){const el=document.getElementById('error-box');if(el)el.style.display='none'}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
